@@ -11,20 +11,19 @@ namespace EventPlus.Domains
         public Guid IdComentarioEvento { get; set; }
 
         [Column(TypeName = "VARCHAR(200)")]
-        [Required(ErrorMessage ="Descricao do comentario obrigatoria")]
+        [Required(ErrorMessage = "Descricao do comentario obrigatoria")]
 
-        public string Descricao { get; set;
+        public string Descricao { get; set; }
         [Column(TypeName = "BIT")]
         [Required]
+        public bool Exibe { get; set; }
 
-        public bool Exibe {  get; set; }
         [Required(ErrorMessage = "Usuario Obrigatorio")]
-
         public Guid IdUsuario { get; set; }
 
         [ForeignKey("IdUsuario")]
 
-        public Usuarios? Usuario {  get; set; }
-
+        public Usuarios? Usuario { get; set; }
+    
     }
 }

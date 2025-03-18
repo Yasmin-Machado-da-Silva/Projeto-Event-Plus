@@ -4,21 +4,34 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace EventPlus.Domains
 {
+    [Table ("Eventos")]
     public class Eventos
     {
         [Key]
-        public Guid IdTipoEvento { get; set; }
-        [Column(TypeName = "Date")]
-        [Required]
+        public Guid EventoID { get; set; }
 
-        [ForeignKey("IdTipoEvento")]
-        public TipoEvento? TipoEvento { get; set; }
+        public Guid TipoEventoID { get; set; }
 
-        public Guid IdInstituicao { get; set; }
-        [ForeignKey("IdInstituicao")]
+        [ForeignKey("TipoEventoID")]
+        public TipoEventos? TipoEvento { get; set; }
 
-        public Instituicao Instituicao { get; set; }
+        public Guid InstituicaoID { get; set; }
 
-        public PresencaEventos? PresencaEventos { get; set; }
+        [ForeignKey("InstituicaoID")]
+        public Instituicao? Instituicao { get; set; }
+
+        public PresencaEventos? Presenca { get; set; } //public PresencasEventos? PresencasEventos {get; set;}
+
+        [Column(TypeName = "VARCHAR(50)")]
+        [Required(ErrorMessage = "O nome do evento é obrigatorio!")]
+        public string? NomeEvento { get; set; }
+
+        [Column(TypeName = "DATE")]
+        [Required(ErrorMessage = "A data do evento é obrigatoria!")]
+        public DateTime DataEvento { get; set; }
+
+        [Column(TypeName = "TEXT")]
+        [Required(ErrorMessage = "Descrição do evento é obrigatoria!!")]
+        public string? Descricao { get; set; }
     }
 }
