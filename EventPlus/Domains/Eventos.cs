@@ -20,7 +20,7 @@ namespace EventPlus.Domains
         [ForeignKey("InstituicaoID")]
         public Instituicao? Instituicao { get; set; }
 
-        public PresencaEventos? Presenca { get; set; } //public PresencasEventos? PresencasEventos {get; set;}
+        public Presenca? Presenca { get; set; } //public PresencasEventos? PresencasEventos {get; set;}
 
         [Column(TypeName = "VARCHAR(50)")]
         [Required(ErrorMessage = "O nome do evento é obrigatorio!")]

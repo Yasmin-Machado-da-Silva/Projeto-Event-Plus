@@ -19,7 +19,7 @@ namespace EventPlus.Context
         public DbSet<TiposUsuarios> TiposUsuarios { get; set; }
         public DbSet<TipoEventos> TipoEventos { get; set; }
         public DbSet<Eventos> Eventos { get; set; }
-        public DbSet<PresencaEventos> PresencaEventos { get; private set; }
+        public DbSet<Presenca> PresencaEventos { get; private set; }
         public DbSet<ComentarioEventos> ComentarioEventos { get; set; }
         public DbSet<Instituicao> Instituicao { get; set; }
 

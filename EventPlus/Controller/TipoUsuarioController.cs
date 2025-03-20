@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using EventPlus.Interface;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EventPlus.Controller
@@ -7,5 +8,11 @@ namespace EventPlus.Controller
     [ApiController]
     public class TipoUsuarioController : ControllerBase
     {
+        private readonly ITipoUsuarioRepository _tipoUsuarioRepository;
+
+        public TipoUsuarioController(ITipoUsuarioRepository tipoUsuarioRepository)
+        {
+            _tipoUsuarioRepository = tipoUsuarioRepository;
+        }
     }
 }

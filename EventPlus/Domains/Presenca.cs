@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace EventPlus.Domains
 {
     [Table("PresencasEventos")]
-    public class PresencaEventos
+    public class Presenca
     {
         [Key]
         public Guid IdPresencaEvento { get; set; }
