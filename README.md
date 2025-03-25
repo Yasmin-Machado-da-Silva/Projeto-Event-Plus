@@ -29,8 +29,8 @@
 
 ## 📁Exemplo de Requisição🤖
 - Método: POST
-<pre> //URL= /api/eventos//
-  { "nome": "Conferência de Desenvolvimento", "data": "2025-03-20T09:00:00", "local": "Auditório B" } //= body//
+<pre> *//URL= /api/eventos//*
+  { "nome": "Conferência de Desenvolvimento", "data": "2025-03-20T09:00:00", "local": "Auditório B" } *//= body//*
 </pre>
 
 ## 🔗Próximos Passos➡️
